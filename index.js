@@ -8,7 +8,7 @@ const API_KEY = `41b79585363b2745796e1a1d9e111d4a`
 function urlGen(choice) {
     const searchurl = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${API_KEY}`
 
-    const mainUrl = `http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${API_KEY}`
+    const mainUrl = `https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${API_KEY}`
     if (choice == false) {
         url = mainUrl;
 
@@ -39,7 +39,7 @@ btn.addEventListener("click", () => {
 
 
 const displayData = (data) => {
-    const Ownurl = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+    const Ownurl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
     weatherStatus.innerHTML += `
    
     <div class="search-status text-white text-center py-4">
@@ -59,7 +59,7 @@ const displayMainData = (data) => {
         if (number == 40) {
             number = 0;
         }
-        const Picurl = `http://openweathermap.org/img/wn/${data[number].weather[0].icon}.png`
+        const Picurl = `https://openweathermap.org/img/wn/${data[number].weather[0].icon}.png`
 
         mainStatus.innerHTML = `
            <div class="main-status text-white text-center">
